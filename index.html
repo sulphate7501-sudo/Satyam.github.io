@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Satyam Diagnostic Centre Hamirpur</title>
+<title>Satyam Diagnostic Lab Hamirpur</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -22,7 +20,7 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#f4f8ff;
+background:#f5f8ff;
 color:#333;
 }
 
@@ -34,9 +32,10 @@ justify-content:space-between;
 align-items:center;
 padding:15px 8%;
 background:white;
-box-shadow:0 3px 15px rgba(0,0,0,0.1);
+box-shadow:0 4px 20px rgba(0,0,0,0.1);
 position:sticky;
 top:0;
+z-index:100;
 }
 
 nav h2{
@@ -45,8 +44,8 @@ color:#0a6efd;
 
 nav ul{
 display:flex;
-list-style:none;
 gap:25px;
+list-style:none;
 }
 
 nav a{
@@ -59,11 +58,11 @@ font-weight:500;
 
 .hero{
 height:90vh;
+background:linear-gradient(120deg,#0a6efd,#00c6ff);
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:linear-gradient(120deg,#0a6efd,#00c6ff);
 color:white;
 padding:20px;
 }
@@ -75,15 +74,15 @@ margin-bottom:15px;
 
 .hero p{
 font-size:18px;
-margin-bottom:25px;
+margin-bottom:20px;
 }
 
 .btn{
-padding:12px 25px;
 background:white;
 color:#0a6efd;
-text-decoration:none;
+padding:12px 25px;
 border-radius:30px;
+text-decoration:none;
 font-weight:600;
 transition:0.3s;
 }
@@ -92,7 +91,7 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-/* SECTIONS */
+/* SECTION */
 
 section{
 padding:70px 8%;
@@ -100,30 +99,31 @@ padding:70px 8%;
 
 .section-title{
 text-align:center;
-font-size:30px;
+font-size:32px;
 color:#0a6efd;
-margin-bottom:50px;
+margin-bottom:40px;
 }
 
-/* ABOUT */
+/* TEST SEARCH */
 
-.about{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
+.search-box{
+max-width:500px;
+margin:auto;
+margin-bottom:40px;
 }
 
-.about img{
+.search-box input{
 width:100%;
-border-radius:10px;
+padding:12px;
+border-radius:30px;
+border:1px solid #ccc;
 }
 
-/* SERVICES */
+/* TEST CARDS */
 
-.services{
+.tests{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:25px;
 }
 
@@ -131,12 +131,42 @@ gap:25px;
 background:white;
 padding:25px;
 border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
+box-shadow:0 6px 20px rgba(0,0,0,0.1);
 transition:0.3s;
 }
 
 .card:hover{
 transform:translateY(-8px);
+}
+
+.card h3{
+color:#0a6efd;
+margin-bottom:10px;
+}
+
+/* BOOKING */
+
+form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+form input,form textarea{
+padding:12px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+form button{
+background:#0a6efd;
+color:white;
+padding:12px;
+border:none;
+border-radius:6px;
+cursor:pointer;
 }
 
 /* CONTACT */
@@ -149,10 +179,10 @@ text-align:center;
 display:inline-block;
 margin:10px;
 padding:12px 25px;
-border-radius:25px;
 background:#0a6efd;
 color:white;
 text-decoration:none;
+border-radius:30px;
 }
 
 /* FOOTER */
@@ -162,21 +192,7 @@ background:#0a6efd;
 color:white;
 text-align:center;
 padding:20px;
-margin-top:40px;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.about{
-grid-template-columns:1fr;
-}
-
-.hero h1{
-font-size:30px;
-}
-
+margin-top:50px;
 }
 
 </style>
@@ -185,116 +201,76 @@ font-size:30px;
 
 <body>
 
-<!-- NAVBAR -->
-
 <nav>
-
 <h2>Satyam Lab</h2>
 
 <ul>
 <li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#tests">Lab Tests</a></li>
+<li><a href="#tests">Tests</a></li>
+<li><a href="#book">Book Test</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
-
 </nav>
-
-<!-- HERO -->
 
 <section class="hero" id="home">
 
 <div>
 
-<h1>Satyam Diagnostic Centre</h1>
+<h1>Satyam Diagnostic Lab</h1>
 
-<p>Trusted Diagnostic Services in Hamirpur</p>
+<p>Trusted Pathology Services Since 2015</p>
 
-<p>⭐ 4.6 Rating | 11+ Years in Healthcare</p>
+<p>Hamirpur Himachal Pradesh</p>
 
-<a class="btn" href="#contact">Book Test</a>
-
-</div>
-
-</section>
-
-<!-- ABOUT -->
-
-<section id="about">
-
-<h2 class="section-title">About Us</h2>
-
-<div class="about">
-
-<div>
-
-<p>
-
-Satyam Diagnostic Centre is a trusted diagnostic laboratory located in Hamirpur, Himachal Pradesh. Established in 2015, the centre provides accurate and reliable diagnostic services with modern equipment and trained staff.
-
-</p>
-
-<br>
-
-<p>
-
-Address: Opposite RKGMC & Hospital, Agriculture Colony, Hamirpur, Himachal Pradesh – 177001
-
-</p>
-
-</div>
-
-<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+<a class="btn" href="#book">Book Lab Test</a>
 
 </div>
 
 </section>
-
-<!-- LAB TESTS -->
 
 <section id="tests">
 
-<h2 class="section-title">Our Lab Tests</h2>
+<h2 class="section-title">Lab Tests</h2>
 
-<div class="services">
-
-<div class="card">
-
-<h3>Stool pH Test</h3>
-
-<p>₹200 onwards</p>
-
+<div class="search-box">
+<input type="text" id="search" placeholder="Search test (CBC, Sugar, Thyroid)">
 </div>
 
-<div class="card">
+<div class="tests" id="testList">
 
-<h3>Stool Analysis Test</h3>
-
-<p>₹400 onwards</p>
-
-</div>
-
-<div class="card">
-
-<h3>Blood Tests</h3>
-
-<p>Routine blood testing available</p>
-
-</div>
-
-<div class="card">
-
-<h3>Health Checkups</h3>
-
-<p>Complete diagnostic packages</p>
-
-</div>
+<div class="card"><h3>CBC Test</h3><p>₹250</p></div>
+<div class="card"><h3>Blood Sugar</h3><p>₹50</p></div>
+<div class="card"><h3>Lipid Profile</h3><p>₹400</p></div>
+<div class="card"><h3>Thyroid Profile</h3><p>₹400</p></div>
+<div class="card"><h3>Urine Test</h3><p>₹100 onwards</p></div>
+<div class="card"><h3>Stool Test</h3><p>₹150 onwards</p></div>
+<div class="card"><h3>Vitamin D</h3><p>₹1000</p></div>
+<div class="card"><h3>Vitamin B12</h3><p>₹800</p></div>
+<div class="card"><h3>LFT</h3><p>₹400</p></div>
 
 </div>
 
 </section>
 
-<!-- CONTACT -->
+<section id="book">
+
+<h2 class="section-title">Book a Lab Test</h2>
+
+<form>
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="tel" placeholder="Phone Number" required>
+
+<input type="text" placeholder="Test Required">
+
+<textarea placeholder="Message"></textarea>
+
+<button type="submit">Submit</button>
+
+</form>
+
+</section>
 
 <section id="contact">
 
@@ -303,12 +279,11 @@ Address: Opposite RKGMC & Hospital, Agriculture Colony, Hamirpur, Himachal Prade
 <div class="contact">
 
 <p>Opposite RKGMC & Hospital</p>
+<p>Agriculture Colony</p>
+<p>Hamirpur Himachal Pradesh - 177001</p>
 
-<p>Agriculture Colony, Hamirpur</p>
-
-<p>Himachal Pradesh – 177001</p>
-
-<p>Open: 9:00 AM – 7:00 PM</p>
+<p>Mon - Fri: 8AM - 7PM</p>
+<p>Sunday: 9AM - 1PM</p>
 
 <a href="tel:9816735272">Call Now</a>
 
@@ -320,9 +295,31 @@ Address: Opposite RKGMC & Hospital, Agriculture Colony, Hamirpur, Himachal Prade
 
 <footer>
 
-<p>© 2026 Satyam Diagnostic Centre | Hamirpur</p>
+<p>© 2026 Satyam Diagnostic Lab Hamirpur</p>
 
 </footer>
+
+<script>
+
+let search = document.getElementById("search");
+
+search.addEventListener("keyup",function(){
+
+let value = search.value.toLowerCase();
+
+let cards = document.querySelectorAll(".card");
+
+cards.forEach(function(card){
+
+let text = card.innerText.toLowerCase();
+
+card.style.display = text.includes(value) ? "block":"none";
+
+});
+
+});
+
+</script>
 
 </body>
 
